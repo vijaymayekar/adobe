@@ -9,9 +9,7 @@ jobs:
     steps:
       - name: Resource Changed step
         run: |
-          echo "$ALLMYSECRETS"
           echo "$ALLMYVARS"
         shell: bash
         env:
-          ALLMYSECRETS: ${{ toJSON(secrets) }}
           ALLMYVARS: ${{ toJSON(vars) }}
