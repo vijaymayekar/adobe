@@ -1,0 +1,15 @@
+name: Resource changed
+
+on: repository_dispatch
+
+jobs:
+  resource-changed:
+    runs-on: ubuntu-latest
+    name: Resource changed
+    steps:
+      - name: Resource Changed step
+        run: |
+
+          PAYLOAD=$(echo "$EVENT" | jq -c '.')
+          TIMESTAMP=$(date -u +%s)
+          echo -e "Payload: $PAYLOAD"
