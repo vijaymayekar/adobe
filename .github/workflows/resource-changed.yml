@@ -9,7 +9,4 @@ jobs:
     steps:
       - name: Resource Changed step
         run: |
-
-          PAYLOAD=$(echo "$EVENT" | jq -c '.')
-          TIMESTAMP=$(date -u +%s)
-          echo -e "Payload: $PAYLOAD"
+          echo -e "$EVENT"
