@@ -12,4 +12,4 @@ jobs:
           echo "$ALLMYVARS"
         shell: bash
         env:
-          ALLMYVARS: ${{ toJSON(vars) }}
+          ALLMYVARS: ${{ toJson(github.event) }}
