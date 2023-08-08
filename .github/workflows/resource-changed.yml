@@ -9,5 +9,5 @@ jobs:
     steps:
       - name: Resource Changed step
         run: |
-          echo -e "$EVENT"
+          echo -e $EVENT
         shell: bash
